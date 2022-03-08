@@ -1,11 +1,11 @@
 # Lending club - Risk Analytics 
 
-Consumer finance company ( Banking and financial ) which specializes in lending various types of loans to urban customers. When the company receives a loan application, the company has to make a decision for loan approval based on the applicant’s profile. 
-Two types of risks are associated with the bank’s decision:
-If the applicant is likely to repay the loan, then not approving the loan results in a loss of business to the company
-If the applicant is not likely to repay the loan, i.e. he/she is likely to default, then approving the loan may lead to a financial loss for the company
-Two type of decision will take for any loan application as “Loan Accepted “ and “Loan Rejected” 
-Identify the loan Accepted  and load Rejected applications & criteria
+Consumer finance company (Banking and financial) which specializes in lending various types of loans to urban customers. When the company receives a loan application, the company has to make a decision for loan approval based on the applicant’s profile. 
+Two types of risks are associated with the bank’s decision:
+If the applicant is likely to repay the loan, then not approving the loan results in a loss of business to the company
+If the applicant is not likely to repay the loan, i.e. he/she is likely to default, then approving the loan may lead to a financial loss for the company
+Two type of decision will take for any loan application as “Loan Accepted “and “Loan Rejected” 
+Identify the loan Accepted and load Rejected applications & criteria
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -15,10 +15,10 @@ Identify the loan Accepted  and load Rejected applications & criteria
 
 # General Information
 # Introduction
-Solving this assignment will give you an idea about how real business problems are solved using EDA. In this case study, apart from applying the techniques you have learnt in EDA, you will also develop a basic understanding of risk analytics in banking and financial services and understand how data is used to minimise the risk of losing money while lending to customers.
+Solving this assignment will give you an idea about how real business problems are solved using EDA. In this case study, apart from applying the techniques you have learnt in EDA, you will also develop a basic understanding of risk analytics in banking and financial services and understand how data is used to minimize the risk of losing money while lending to customers.
 
 # Business Understanding
-You work for a consumer finance company which specialises in lending various types of loans to urban customers. When the company receives a loan application, the company has to make a decision for loan approval based on the applicant’s profile. Two types of risks are associated with the bank’s decision:
+You work for a consumer finance company which specializes in lending various types of loans to urban customers. When the company receives a loan application, the company has to make a decision for loan approval based on the applicant’s profile. Two types of risks are associated with the bank’s decision:
 
 If the applicant is likely to repay the loan, then not approving the loan results in a loss of business to the company
 
@@ -35,11 +35,11 @@ Like most other lending companies, lending loans to ‘risky’ applicants is th
 
 If one is able to identify these risky loan applicants, then such loans can be reduced thereby cutting down the amount of credit loss. Identification of such applicants using EDA is the aim of this case study.
 
-In other words, the company wants to understand the driving factors (or driver variables) behind loan default, i.e. the variables which are strong indicators of default. The company can utilise this knowledge for its portfolio and risk assessment.
+In other words, the company wants to understand the driving factors (or driver variables) behind loan default, i.e. the variables which are strong indicators of default. The company can utilize this knowledge for its portfolio and risk assessment.
 
 ## Steps involved:
 Reading and Understanding the Data
-Data cleaning & preperation
+Data cleaning & preparation
 Data Visualization (Univariate/Bivariate/Multivariate Analysis)
 Conclusion: This part is about conclusion drawn from the study.
 
@@ -47,7 +47,7 @@ Conclusion: This part is about conclusion drawn from the study.
 - Import all require libraries
 - Import the loan data from 2007 to 2011 and data dictionary 
 
-# Data cleaning & preperation:
+# Data cleaning & preparation:
 
 - Check the number of null values in the columns
 	It is observed that many columns have all the null values, these columns may be deleted
@@ -58,12 +58,12 @@ Conclusion: This part is about conclusion drawn from the study.
 - Interest rate column and removing % and converting to float type for analysis
 Understand the column:
 - Desc column is similar to purpose of loan therefore dropping the column, also title column is also similar to purpose thus same is also deleted.
-- Also columns related to behavioral attributes can be dropped as we are analysing the comparison between columns which can impact default of loan before sanction of loan as these data columns will not be availble to us before sanction. Also funding will be done after sanction thus columns related to funding is being dropped
+- Also columns related to behavioral attributes can be dropped as we are analyzing the comparison between columns which can impact default of loan before sanction of loan as these data columns will not be available to us before sanction. Also funding will be done after sanction thus columns related to funding is being dropped
 - Our target column is loan_status for label as charged-off which indicated default against a loan
 
 # Outlier treatment:
-Create dataframe containing predictors and the corresponding outlier percetange and check the % of data left after all the outlier removal
-Percentages of row data lost during cleaning and removal of outliers is 15.23% which is not much considering no. of rows of the tune of 37k. Therfore, theses changes can be implemented on original updated dataframe
+Create data frame containing predictors and the corresponding outlier percentage and check the % of data left after all the outlier removal
+Percentages of row data lost during cleaning and removal of outliers is 15.23% which is not much considering no. of rows of the tune of 37k. Therefore, these changes can be implemented on original updated dataframe
 
 # Data Visualization (Univariate/Bivariate/Multivariate Analysis)
 
@@ -77,14 +77,14 @@ Identifying variables- Categorical variable:
 
 - Out of total loans sanctioned excluding current loans 14.38% loans has been defaulted
 - Loans with 60 month term has been started from 2010
-- After starting sanctioning loan with 60 months term from 2010 it is seen that no. of defaults in 60 month term loan are on a increasing trend comapred to 36 month term loan.
+- After starting sanctioning loan with 60 months term from 2010 it is seen that no. of defaults in 60 month term loan are on a increasing trend compared to 36 month term loan.
 
 Bivariate Analysis:
 
-- Funded amount and funded amount by investor has a stromg correcaltion with each other and with loan amount, therfore theses two columns can be dropped
-- As only 5 loans has been sanctioned in NE therefore high default in NE cannot be genearlized and can be ignored. The next state with maximum default rate is in NV which is having 416 no. of loan sanctioned
+- Funded amount and funded amount by investor has a strong correlation with each other and with loan amount, therefore theses two columns can be dropped
+- As only 5 loans has been sanctioned in NE therefore high default in NE cannot be generalized and can be ignored. The next state with maximum default rate is in NV which is having 416 no. of loan sanctioned
 
-Derived Metrices:
+Derived Metrics:
 
 - Check variable for income bin with low, Medium, High, Very high income and % loan
 {'Low loan_amnt': '500.0 to   5000.0', 'Medium loan_amnt': '  5000.0 to  8875.0', 'High loan_amnt': '8875.0 to  13600.0', 'Very high loan_amnt': '13600.0 to 29000.0'}
@@ -94,14 +94,14 @@ Derived Metrices:
 Multivariate Analysis:
 
 - Lets check variation between dti and interest rate and loan status
-- As can be seen there is a decreasing trend of loan default in 36 month term loans, however 60 month term loans deafult rate is on increasing trend ever since its inception in 2010.
-- In case of very high interest rate, medium DTI is yielding alomst same deafult rate as very high DTI.
+- As can be seen there is a decreasing trend of loan default in 36 month term loans, however 60 month term loans default rate is on increasing trend ever since its inception in 2010.
+- In case of very high interest rate, medium DTI is yielding almost same defaults rate as very high DTI.
 - Check combined effect of DTI ratio and interest rate on default %
 {'Low int_rate': '5.42 to  8.90', 'Medium int_rate': ' 8.90 to  11.71', 'High int_rate': '11.71 to  14.22', 'Very high int_rate': '14.22 to 22.11'}
 {'Low Dti': '0 to  8.35', 'Medium Dti': ' 8.35 to  13.56', 'High Dti': '13.56 to  18.70', 'Very high Dti': '18.70 to 29.99'}
 - In case of very high interest rate, medium DTI is yielding alomst same deafult rate as very high DTI.
 
-- Check combined effect of Verifiaction status  and income on default %
+- Check combined effect of Verification status  and income on default %
 {'Low Income': '4000.0 to  40000.0', 'Medium income': ' 40000.0 to  55000.0', 'High Income': '55000.0 to  75000.0', 'Very high Income': '75000.0 to 137004.0'}
 - Variation is as per earlier variation brought out above. No abnormality observed.
 
@@ -109,11 +109,10 @@ Multivariate Analysis:
 {'Low loan_amnt': '500.0 to   5000.0', 'Medium loan_amnt': '  5000.0 to  8875.0', 'High loan_amnt': '8875.0 to  13600.0', 'Very high loan_amnt': '13600.0 to 29000.0'}
 {'Low Dti': '0 to  8.35', 'Medium Dti': ' 8.35 to  13.56', 'High Dti': '13.56 to  18.70', 'Very high Dti': '18.70 to 29.99'}
 - Variation is as per earlier variation brought out above. No abnormality observed.
-
 - From above following is observed:
-	In general max default for all the bins of loan amount is for loan given to small business
-	For low and small loan amount default rates are higher for debt consolidation purpose of loan.
-	For very high loan amount, house and education loan are having max default rate after small business
+1.	In general max default for all the bins of loan amount is for loan given to small business. 
+2.	For low and medium loan amount default rates are higher for Renewable Energy purpose of loan.
+3.	For very high loan amount, house and education loan are having max default rate after small business.
 - Check combined effect of Loan amount and purpose on default %
 - Again similar trend is there. Loan to small business is having max default rate among all income groups.
 
@@ -123,11 +122,11 @@ Multivariate Analysis:
 
 # Conclusions
 1. No. of loans being offered are in an increasing trend from 2007 to 2011 and so does the loan default rate.
-2. Default rate is much higher for 60 months term comapred to 36 month term ever since its inception in 2010. Infact default rate is on decreasing trend for 36 months term may be due to increasing 60 month term loan. Therfore no. of 60 months term loan may be reduced.
-3. It is observed that there is higher tendency of loan default when loan is being offered for purpose of small business, therfore no. of loans to small business may be reduced or offered after due diligence.
-4. Less defaults are being observed for lower interest rate irrespective of dti, therfore, low interest rate loans may be given in more nos.. Also. Lonas are not being offered for higher dti(> ~25%) and higher interest rate (> ~15%) may be due to high default risk asociated with such loans.
+2. Default rate is much higher for 60 months term compared to 36 month term ever since its inception in 2010. Intact default rate is on decreasing trend for 36 months term may be due to increasing 60 month term loan. Therefore no. of 60 months term loan may be reduced.
+3. It is observed that there is higher tendency of loan default when loan is being offered for purpose of small business, therefore no. of loans to small business may be reduced or offered after due diligence.
+4. Less defaults are being observed for lower interest rate irrespective of dti, therefore, low interest rate loans may be given in more nos.. Also. Loans are not being offered for higher dti(> ~25%) and higher interest rate (> ~15%) may be due to high default risk associated with such loans.
 5. For low and small loan amount default rates are higher for debt consolidation purpose of loan and also for very high loan amount, house and education loan are having max default rate after small business.
-6. In case of very high interest rate, medium DTI is yielding alomst same deafult rate as very high DTI.
+6. In case of very high interest rate, medium DTI is yielding almost same defaults rate as very high DTI.
 7. It is observed that loan applicants with verified annual income are defaulting more compared to Not verified and Source verified. It may conclude that annual income is not being verified correctly or income is being verified for highly risky applicants.
 
 ## Acknowledgements
