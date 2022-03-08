@@ -128,6 +128,7 @@ Multivariate Analysis:
 4. Less defaults are being observed for lower interest rate irrespective of dti, therfore, low interest rate loans may be given in more nos.. Also. Lonas are not being offered for higher dti(> ~25%) and higher interest rate (> ~15%) may be due to high default risk asociated with such loans.
 5. For low and small loan amount default rates are higher for debt consolidation purpose of loan and also for very high loan amount, house and education loan are having max default rate after small business.
 6. In case of very high interest rate, medium DTI is yielding alomst same deafult rate as very high DTI.
+7. It is observed that loan applicants with verified annual income are defaulting more compared to Not verified and Source verified. It may conclude that annual income is not being verified correctly or income is being verified for highly risky applicants.
 
 ## Acknowledgements
 - This project was inspired by loan applicant's and loan bank
